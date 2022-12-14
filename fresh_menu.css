@@ -1,0 +1,197 @@
+a {
+    text-decoration: none;
+    color:  #0a0a29;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #9999e6;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #0a0a29;
+    height: 50px;
+    padding: 1em;
+    border: 1px solid  #0000b3;
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    bottom: 0.2em;
+    z-index: 1;
+  }
+  
+  .menu a:hover {
+      opacity: 1;
+      color: #0000b3;
+    }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #9999e6;
+  }
+  
+  .menu a {
+    color: #0a0a29;
+    text-decoration: none;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2.4em;
+    padding: 2.5px 15px;
+    opacity: 0.6;
+    width: 70px;
+    text-align: center;
+    align-items: center;
+    opacity: 1;
+  }
+  
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #0a0a29;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 6px;
+    transform: rotate(45deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 6px;
+    transform: rotate(-45deg);
+  }
+  @media (max-width: 768px) {
+    .menu-button-container {
+      display: flex;
+    }
+    
+    article {
+        font-size: 15px;
+    }
+    
+    
+    .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9999e6;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #0a0a29;
+    height: 15vw;
+    padding: 0;
+    border: 1px solid #0000b3;
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    bottom: 0.2em;
+    z-index: 1;
+  }
+     .menu {
+      position: absolute;
+      bottom: 45px;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menu a {color: #0a0a29;
+    text-decoration: none;
+    font-family: Segoe UI;
+    font-size: 12px;
+    line-height: 1.6em;
+    padding: 2.5px 15px;
+    opacity: 0.6;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    opacity: 1;
+  }
+  
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #0000b3;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: #0a0a29;
+      background-color: #9999e6;
+    }
+    
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #0000b3;
+    }
+
+    .menu a:hover {
+        opacity: 1;
+        color: #0000b3;
+      }
+  }
+  
+  @media screen {
+      body { font-size: 15px }
+  }  
